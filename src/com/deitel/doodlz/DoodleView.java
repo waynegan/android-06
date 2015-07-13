@@ -4,7 +4,7 @@ package com.deitel.doodlz;
 
 import java.util.HashMap;
 import java.util.Map;
-
+import android.content.res.Resources;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -22,6 +22,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+import android.graphics.drawable.Drawable;
 
 // the main screen that is painted
 public class DoodleView extends View 
@@ -84,6 +85,17 @@ public class DoodleView extends View
       // clear the bitmap 
       invalidate(); // refresh the screen
    }
+   public void setDrawingScreenImage(int ImageID) 
+   {
+	   Resources res = getResources();
+	   //bitmap = BitmapFactory.decodeResource(res, ImageID);
+	   //bitmapCanvas = new Canvas(bitmap.copy(Bitmap.Config.ARGB_8888, true));
+	   Drawable drawable = res.getDrawable(ImageID);
+	   setDrawingScreenColor(Color.WHITE);
+	   drawable.setBounds(0, 0, bitmapCanvas.getWidth(), bitmapCanvas.getHeight());
+	   bitmapCanvas.drawColor(Color.TRANSPARENT);
+	   drawable.draw(bitmapCanvas);
+   } 
    public void setDrawingScreenColor(int color) 
      {
    	   paintScreen.setColor(color);

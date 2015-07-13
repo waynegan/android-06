@@ -24,40 +24,45 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int pict1=0x7f020001;
+        public static final int pict2=0x7f020002;
+        public static final int pict3=0x7f020003;
+        public static final int pict4=0x7f020004;
     }
     public static final class id {
         public static final int alphaBgSeekBar=0x7f080003;
         public static final int alphaBgTextView=0x7f080002;
-        public static final int alphaSeekBar=0x7f08000d;
-        public static final int alphaTextView=0x7f08000c;
-        public static final int background=0x7f08001e;
+        public static final int alphaSeekBar=0x7f08000e;
+        public static final int alphaTextView=0x7f08000d;
+        public static final int background=0x7f08001f;
         public static final int backgroundDialogGridLayout=0x7f080001;
         public static final int blueBgSeekBar=0x7f080009;
         public static final int blueBgTextView=0x7f080008;
-        public static final int blueSeekBar=0x7f080013;
-        public static final int blueTextView=0x7f080012;
-        public static final int clear=0x7f08001c;
-        public static final int color=0x7f080019;
+        public static final int blueSeekBar=0x7f080014;
+        public static final int blueTextView=0x7f080013;
+        public static final int clear=0x7f08001d;
+        public static final int color=0x7f08001a;
         public static final int colorBgView=0x7f08000a;
-        public static final int colorDialogGridLayout=0x7f08000b;
-        public static final int colorView=0x7f080014;
+        public static final int colorDialogGridLayout=0x7f08000c;
+        public static final int colorView=0x7f080015;
         public static final int doodleFragment=0x7f080000;
-        public static final int doodleView=0x7f080015;
-        public static final int eraser=0x7f08001b;
+        public static final int doodleView=0x7f080016;
+        public static final int eraser=0x7f08001c;
+        public static final int gallery=0x7f08000b;
         public static final int greenBgSeekBar=0x7f080007;
         public static final int greenBgTextView=0x7f080006;
-        public static final int greenSeekBar=0x7f080011;
-        public static final int greenTextView=0x7f080010;
-        public static final int lineWidth=0x7f08001a;
-        public static final int lineWidthDialogGridLayout=0x7f080016;
-        public static final int print=0x7f08001f;
+        public static final int greenSeekBar=0x7f080012;
+        public static final int greenTextView=0x7f080011;
+        public static final int lineWidth=0x7f08001b;
+        public static final int lineWidthDialogGridLayout=0x7f080017;
+        public static final int print=0x7f080020;
         public static final int redBgSeekBar=0x7f080005;
         public static final int redBgTextView=0x7f080004;
-        public static final int redSeekBar=0x7f08000f;
-        public static final int redTextView=0x7f08000e;
-        public static final int save=0x7f08001d;
-        public static final int widthImageView=0x7f080017;
-        public static final int widthSeekBar=0x7f080018;
+        public static final int redSeekBar=0x7f080010;
+        public static final int redTextView=0x7f08000f;
+        public static final int save=0x7f08001e;
+        public static final int widthImageView=0x7f080018;
+        public static final int widthSeekBar=0x7f080019;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -124,4 +129,25 @@ public final class R {
          */
         public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a Gallery.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Gallery_android_galleryItemBackground android:galleryItemBackground}</code></td><td></td></tr>
+           </table>
+           @see #Gallery_android_galleryItemBackground
+         */
+        public static final int[] Gallery = {
+            0x0101004c
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#galleryItemBackground}
+          attribute's value can be found in the {@link #Gallery} array.
+          @attr name android:galleryItemBackground
+        */
+        public static final int Gallery_android_galleryItemBackground = 0;
+    };
 }
