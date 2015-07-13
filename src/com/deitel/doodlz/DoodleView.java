@@ -33,7 +33,7 @@ public class DoodleView extends View
    private Canvas bitmapCanvas; // used to draw on bitmap
    private final Paint paintScreen; // used to draw bitmap onto screen
    private final Paint paintLine; // used to draw lines onto bitmap
-   
+   private Bitmap bgBitmap;
    // Maps of current Paths being drawn and Points in those Paths
    private final Map<Integer, Path> pathMap = new HashMap<Integer, Path>(); 
    private final Map<Integer, Point> previousPointMap = 
@@ -67,19 +67,36 @@ public class DoodleView extends View
    {
       bitmap = Bitmap.createBitmap(getWidth(), getHeight(), 
          Bitmap.Config.ARGB_8888);
+      bgBitmap= Bitmap.createBitmap(getWidth(), getHeight(), 
+     Bitmap.Config.ARGB_8888);
+        bgBitmap.eraseColor(Color.WHITE);
       bitmapCanvas = new Canvas(bitmap);
-      bitmap.eraseColor(Color.WHITE); // erase the Bitmap with white
+      setDrawingScreenColor(Color.WHITE);
+      // erase the Bitmap with white
    } 
    
    // clear the painting
    public void clear()
    {
       pathMap.clear(); // remove all paths
-      previousPointMap.clear(); // remove all previous points
-      bitmap.eraseColor(Color.WHITE); // clear the bitmap 
+      previousPointMap.clear();
+      setDrawingScreenColor(Color.WHITE);
+      // clear the bitmap 
       invalidate(); // refresh the screen
    }
+   public void setDrawingScreenColor(int color) 
+     {
+   	   paintScreen.setColor(color);
+   	   bitmap.eraseColor(paintScreen.getColor());
+   	   //bitmapCanvas.drawColor(paintScreen.getColor()); 
+   	   //bgBitmap.eraseColor(color);
+    } 
    
+     // return the painted Screen's color
+      public int getDrawingScreenColor() 
+     {
+        return paintScreen.getColor();
+     }
    // set the painted line's color
    public void setDrawingColor(int color) 
    {
@@ -109,6 +126,7 @@ public class DoodleView extends View
    protected void onDraw(Canvas canvas) 
    {
       // draw the background screen
+	   System.out.println("onDraw - paintScreen:"+paintScreen.getColor());
       canvas.drawBitmap(bitmap, 0, 0, paintScreen);
 
       // for each path currently being drawn

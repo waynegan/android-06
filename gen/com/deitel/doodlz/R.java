@@ -30,6 +30,7 @@ public final class R {
         public static final int alphaBgTextView=0x7f080002;
         public static final int alphaSeekBar=0x7f08000d;
         public static final int alphaTextView=0x7f08000c;
+        public static final int background=0x7f08001e;
         public static final int backgroundDialogGridLayout=0x7f080001;
         public static final int blueBgSeekBar=0x7f080009;
         public static final int blueBgTextView=0x7f080008;
@@ -49,7 +50,7 @@ public final class R {
         public static final int greenTextView=0x7f080010;
         public static final int lineWidth=0x7f08001a;
         public static final int lineWidthDialogGridLayout=0x7f080016;
-        public static final int print=0x7f08001e;
+        public static final int print=0x7f08001f;
         public static final int redBgSeekBar=0x7f080005;
         public static final int redBgTextView=0x7f080004;
         public static final int redSeekBar=0x7f08000f;
@@ -72,6 +73,7 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int button_cancel=0x7f050002;
         public static final int button_erase=0x7f050001;
+        public static final int button_set_background_color=0x7f050017;
         public static final int button_set_color=0x7f050003;
         public static final int button_set_line_width=0x7f050004;
         public static final int label_alpha=0x7f050006;
@@ -79,6 +81,7 @@ public final class R {
         public static final int label_green=0x7f050008;
         public static final int label_red=0x7f050007;
         public static final int line_imageview_description=0x7f050005;
+        public static final int menuitem_background=0x7f050016;
         public static final int menuitem_clear=0x7f05000a;
         public static final int menuitem_color=0x7f05000b;
         public static final int menuitem_eraser=0x7f05000c;
@@ -89,6 +92,7 @@ public final class R {
         public static final int message_error_printing=0x7f050013;
         public static final int message_error_saving=0x7f050011;
         public static final int message_saved=0x7f050012;
+        public static final int title_background_color_dialog=0x7f050018;
         public static final int title_color_dialog=0x7f050014;
         public static final int title_line_width_dialog=0x7f050015;
     }
